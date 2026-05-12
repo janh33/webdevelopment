@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Content Using DOM</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #message {
+            color: blue;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript DOM Example</h2>
+
+    <button onclick="showMessage()">
+        Click Here
+    </button>
+
+    <div id="message"></div>
+
+    <script>
+
+        function showMessage()
+        {
+            document.getElementById("message").innerHTML =
+            "Welcome to JavaScript DOM Manipulation!";
+        }
+
+    </script>
+
+</body>
+</html>

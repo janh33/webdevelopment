@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+</head>
+
+<body>
+
+<h3>Simple Calculator</h3>
+
+<label>Enter First number: </label>
+<input type="number" id="num1">
+
+<br><br>
+
+<label>Enter second number: </label>
+<input type="number" id="num2">
+
+<br><br>
+
+<label>Operator: </label>
+
+<select id="operator">
+
+<option value="+">Addition(+)</option>
+
+<option value="-">Subtraction(-)</option>
+
+<option value="*">Multiplication(*)</option>
+
+<option value="/">Division(/)</option>
+
+</select>
+
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+// Function
+function calculate(){
+
+// Get values
+let num1 = parseFloat(document.getElementById("num1").value);
+
+let num2 = parseFloat(document.getElementById("num2").value);
+
+let operator = document.getElementById("operator").value;
+
+let result;
+
+// Switch Case
+switch(operator){
+
+case '+':
+
+result = num1 + num2;
+break;
+
+case '-':
+
+result = num1 - num2;
+break;
+
+case '*':
+
+result = num1 * num2;
+break;
+
+case '/':
+
+if(num2 == 0){
+
+alert("Division by zero not allowed");
+return;
+
+}
+
+result = num1 / num2;
+break;
+
+default:
+
+result = "Invalid Operator";
+}
+
+// Display Result
+document.getElementById("result").innerHTML =
+"Result: " + result;
+
+}
+
+</script>
+
+</body>
+</html>
